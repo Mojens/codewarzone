@@ -10,6 +10,9 @@ app.use(express.json());
 app.get('/', (req, res) => {
     res.send(PageGenerator.frontPage);
 });
+app.get('/about', (req, res) => {
+    res.send(PageGenerator.aboutPage);
+});
 
 
 app.listen(process.env.PORT || 3333, (error) => {

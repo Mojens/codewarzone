@@ -6,6 +6,12 @@ const frontPage = TemplateEngine.renderPage(TemplateEngine.readPage(frontPagePat
     tabTitle: `CodeWarZone`,
 });
 
+const aboutPagePath = path.join(process.cwd(), 'public', 'pages', 'about', 'about.html');
+const aboutPage = TemplateEngine.renderPage(TemplateEngine.readPage(aboutPagePath), {
+    tabTitle: `About - CodeWarZone`,
+});
+
 export default {
-    frontPage
+    frontPage,
+    aboutPage,
 };
