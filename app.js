@@ -4,7 +4,10 @@ app.use(express.json());
 
 
 app.get('/test', (req, res) => {
-    res.send({data: 'Hello World!'});
+    return res.status(200).json({
+        title: "Express Testing",
+        message: "The app is working properly!",
+      });
 });
 
 
