@@ -8,7 +8,6 @@ app.use(express.json());
 
 
 app.get('/', (req, res) => {
-    res.setHeader('Content-Type', 'text/html');
     res.send(PageGenerator.frontPage);
 });
 
