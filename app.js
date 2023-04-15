@@ -1,12 +1,16 @@
 import express from 'express';
 import TemplateEngine from './util/TemplateEngine.js';
+import path from 'path';
 
 const app = express();
 app.use(express.json());
 
-const frontPage = TemplateEngine.renderPage(TemplateEngine.readPage("/public/pages/frontpage/frontpage.html"), {
+
+const frontPagePath = path.join(process.cwd(), 'public', 'pages', 'frontpage', 'frontpage.html');
+const frontPage = TemplateEngine.renderPage(TemplateEngine.readPage(frontPagePath), {
     tabTitle: "Frontpage",
 });
+
 
 
 
