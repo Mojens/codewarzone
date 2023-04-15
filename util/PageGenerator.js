@@ -3,7 +3,7 @@ import TemplateEngine from './TemplateEngine.js';
 
 const frontPagePath = path.join(process.cwd(), 'public', 'pages', 'frontpage', 'frontpage.html');
 const frontPage = TemplateEngine.renderPage(TemplateEngine.readPage(frontPagePath), {
-    tabTitle: "Frontpage",
+    tabTitle: process.env.SECRET_VALUE ,
 });
 
 export default {
