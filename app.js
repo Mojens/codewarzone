@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 });
 
 
-app.listen(process.env.PORT || 8080, (error) => {
+app.listen(process.env.PORT || 3333, (error) => {
     if (error) {
         console.log(error);
     }
