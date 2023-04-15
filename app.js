@@ -4,7 +4,7 @@ import TemplateEngine from './util/TemplateEngine.js';
 const app = express();
 app.use(express.json());
 
-const frontPage = TemplateEngine.renderPage(TemplateEngine.readPage("./public/pages/frontpage/frontpage.html"), {
+const frontPage = TemplateEngine.renderPage(TemplateEngine.readPage("./pages/frontpage/frontpage.html"), {
     tabTitle: "Frontpage",
 });
 
