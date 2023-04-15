@@ -3,12 +3,15 @@ import express from 'express';
 const app = express();
 app.use(express.json());
 
-
+const frontPage = TemplateEngine.renderPage(TemplateEngine.readPage("./public/pages/frontpage/frontpage.html"), {
+    tabTitle: "Frontpage",
+});
 
 
 
 app.get('/', (req, res) => {
-    res.send({ message: 'Hello World' });
+    res.setHeader('Content-Type', 'text/html');
+    res.send(frontPage);
 });
 
 
