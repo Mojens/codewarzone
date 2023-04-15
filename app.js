@@ -1,16 +1,14 @@
 import express from 'express';
-import TemplateEngine from './util/TemplateEngine.js';
+
 const app = express();
 app.use(express.json());
 
-const frontPage = TemplateEngine.renderPage(TemplateEngine.readPage("./public/pages/frontpage/frontpage.html"), {
-    tabTitle: "Frontpage",
-});
 
 
 
-app.get('/test', (req, res) => {
-    res.send(frontPage);
+
+app.get('/', (req, res) => {
+    res.send({ message: 'Hello World' });
 });
 
 
