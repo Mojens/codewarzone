@@ -1,0 +1,46 @@
+.txt-red {
+    color: red;
+}
+
+.txt-blue {
+    color: blue;
+}
+.bg-yellow {
+    background-color: yellow;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.font-italic {
+    font-style: italic;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.border-black {
+    border: 1px solid black;
+}
+
+.bg-gradient {
+    background: linear-gradient(to bottom, #ffffff 0%, #cccccc 100%);
+}
+
+.box-shadow {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.txt-underline {
+    text-decoration: underline;
+}
+
+.txt-strikethrough {
+    text-decoration: line-through;
+}
