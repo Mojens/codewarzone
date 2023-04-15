@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22",
+    "openai": "^3.2.1"
+  },
+  "name": "codewarzone",
+  "version": "1.0.0",
+  "description": "Website with purpose to educate programming students",
+  "type": "module",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Programming",
+    "learning",
+    "education",
+    "javascript",
+    "nodejs",
+    "nodemon",
+    "express"
+  ],
+  "author": "Mohammad M.",
+  "license": "ISC"
+}
