@@ -1,7 +1,5 @@
 import express from 'express';
 import PageGenerator from './util/PageGenerator.js';
-
-
 const app = express();
 app.use(express.json());
 
