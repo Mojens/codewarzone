@@ -1,11 +1,13 @@
 body {
-    background-color: white;
-    color: black;
+  background-color: white !important;
+  color: #222930 !important;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #222930 !important;
+    color: white !important;
   }
- @media (prefers-color-scheme: dark) {
-    body {
-      background-color: black;
-      color: white;
-    }
-  }
-  
+}

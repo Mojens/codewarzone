@@ -18,7 +18,7 @@ app.get('/about', (req, res) => {
     res.send(PageGenerator.aboutPage);
 });
 
-app.listen(process.env.PORT || 3333, (error) => {
+app.listen(process.env.PORT, (error) => {
     if (error) {
         console.log(error);
     }
