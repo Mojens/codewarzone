@@ -11,7 +11,13 @@ const aboutPage = TemplateEngine.renderPage(TemplateEngine.readPage(aboutPagePat
     tabTitle: `About - CodeWarZone`,
 });
 
+const contactPagePath = path.join(process.cwd(), 'public', 'pages', 'contact', 'contact.html');
+const contactPage = TemplateEngine.renderPage(TemplateEngine.readPage(contactPagePath), {
+    tabTitle: `Contact - CodeWarZone`,
+});
+
 export default {
     frontPage,
     aboutPage,
+    contactPage,
 };
