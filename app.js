@@ -27,34 +27,34 @@ app.get('/exercises/:language/:subject?', (req, res) => {
 
     if (language === 'javascript') {
         if (subject === 'general-knowledge') {
-            res.send({ message: 'General Knowledge' });
+            res.send(PageGenerator.javascriptExercisesPage);
 
         } else if (subject === 'variables') {
-            res.send({ message: 'Variables' });
+            res.send(PageGenerator.javascriptExercisesPage);
 
         } else if (subject === 'this') {
-            res.send({ message: 'This' });
+            res.send(PageGenerator.javascriptExercisesPage);
 
         } else if (subject === 'window') {
-            res.send({ message: 'Window' });
+            res.send(PageGenerator.javascriptExercisesPage);
 
         } else if (subject === 'dom') {
-            res.send({ message: 'DOM' });
+            res.send(PageGenerator.javascriptExercisesPage);
 
         } else if (subject === 'functions') {
-            res.send({ message: 'Functions' });
+            res.send(PageGenerator.javascriptExercisesPage);
 
         } else if (subject === 'objects') {
-            res.send({ message: 'Objects' });
+            res.send(PageGenerator.javascriptExercisesPage);
 
         } else if (subject === 'arrays') {
-            res.send({ message: 'Arrays' });
+            res.send(PageGenerator.javascriptExercisesPage);
 
         } else if (subject === 'if-else') {
-            res.send({ message: 'If-Else' });
+            res.send(PageGenerator.javascriptExercisesPage);
 
         } else if (subject === 'fetch-async-await') {
-            res.send({ message: 'Fetch, Async & Await' });
+            res.send(PageGenerator.javascriptExercisesPage);
         }
         else {
             res.send(PageGenerator.javascriptExercisesPage);
