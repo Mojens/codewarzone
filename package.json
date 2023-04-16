@@ -10,12 +10,11 @@
   "description": "Website with purpose to educate programming students",
   "type": "module",
   "main": "app.js",
-  "devDependencies": {},
   "engines": {
     "node": "14.x"
   },
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

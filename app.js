@@ -1,5 +1,7 @@
 import express from 'express';
 import PageGenerator from './util/PageGenerator.js';
+import dotenv from 'dotenv';
+dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -14,7 +16,6 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
     res.send(PageGenerator.aboutPage);
 });
-
 
 app.listen(process.env.PORT || 3333, (error) => {
     if (error) {
