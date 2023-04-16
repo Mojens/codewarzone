@@ -25,7 +25,8 @@ const contactPage = TemplateEngine.renderPage(TemplateEngine.readPage(contactPag
 
 const exercisesPagePath = path.join(process.cwd(), 'public', 'pages', 'exercises', 'exercises.html');
 const exercisesPage = TemplateEngine.renderPage(TemplateEngine.readPage(exercisesPagePath), {
-    tabTitle: `Exercises - CodeWarZone`,  
+    tabTitle: `Exercises - CodeWarZone`,
+    cssLink: `<link rel="stylesheet" href="/pages/exercises/exercises.css">`,  
 });
 
 export default {
