@@ -16,11 +16,11 @@ app.get('/about', (req, res) => {
     res.send(PageGenerator.aboutPage);
 });
 app.get('/contact', (req, res) => {
-    res.send(PageGenerator.contactPage);
+    res.send(PageGenerator.contactPage());
 });
 app.get('/exercises', (req, res) => {
     res.send(PageGenerator.exercisesPage);
-  });
+});
 app.get('/exercises/:language/:subject?', (req, res) => {
     const language = req.params.language;
     const subject = req.params.subject;
@@ -67,6 +67,26 @@ app.get('/exercises/:language/:subject?', (req, res) => {
 
 
 
+app.post('/contact', (req, res) => {
+    const name = req.body.name;
+    const email = req.body.email;
+    const message = req.body.message;
+
+    /*
+    Skal ændres til status osv, mangler bare nodemailer
+    if (name.length < 2) {
+        const errorMessage = 'An has occurred. Please try again later.';
+        res.send(PageGenerator.contactPage(errorMessage, ''));
+        return;
+    } else {
+        const successMessage = 'Your message has been sent!';
+        res.send(PageGenerator.contactPage('', successMessage));
+    }
+    */
+
+    const errorMessage = 'An has occurred. Please try again later.';
+    res.send(PageGenerator.contactPage(errorMessage, ''));
+});
 
 app.get('*', (req, res) => {
     res.send(PageGenerator.pageNotFound);

@@ -18,21 +18,32 @@ const aboutPage = TemplateEngine.renderPage(TemplateEngine.readPage(aboutPagePat
 });
 
 const contactPagePath = path.join(process.cwd(), 'public', 'pages', 'contact', 'contact.html');
-const contactPage = TemplateEngine.renderPage(TemplateEngine.readPage(contactPagePath), {
-    tabTitle: `Contact - CodeWarZone`,
-    cssLink: `<link rel="stylesheet" href="/pages/contact/contact.css">`,
-});
+function contactPage(errorMessage = '', successMessage = '') {
+    return TemplateEngine.renderPage(TemplateEngine.readPage(contactPagePath), {
+        tabTitle: `Contact - CodeWarZone`,
+        cssLink: `<link rel="stylesheet" href="/pages/contact/contact.css">`,
+        scriptLink: `
+        <script>
+                    const errorResponse = document.getElementById('contact-error-response');
+                    errorResponse.textContent = '${errorMessage}';
+                </script>
+                <script>
+            const successResponse = document.getElementById('contact-success-response');
+            successResponse.textContent = '${successMessage}';
+        </script>`,
+    });
+}
 
 const exercisesPagePath = path.join(process.cwd(), 'public', 'pages', 'exercises', 'exercises.html');
 const exercisesPage = TemplateEngine.renderPage(TemplateEngine.readPage(exercisesPagePath), {
     tabTitle: `Exercises - CodeWarZone`,
-    cssLink: `<link rel="stylesheet" href="/pages/exercises/exercises.css">`,  
+    cssLink: `<link rel="stylesheet" href="/pages/exercises/exercises.css">`,
 });
 
 const javascriotExercisesPagePath = path.join(process.cwd(), 'public', 'pages', 'javascript-exercises', 'javascript-exercises.html');
 const javascriptExercisesPage = TemplateEngine.renderPage(TemplateEngine.readPage(javascriotExercisesPagePath), {
     tabTitle: `JavaScript Exercises - CodeWarZone`,
-    cssLink: `<link rel="stylesheet" href="/pages/exercises/exercises.css">`, 
+    cssLink: `<link rel="stylesheet" href="/pages/exercises/exercises.css">`,
 });
 
 const pageNotFoundPath = path.join(process.cwd(), 'public', 'pages', '404', '404.html');
