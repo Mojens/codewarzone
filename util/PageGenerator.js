@@ -29,9 +29,16 @@ const exercisesPage = TemplateEngine.renderPage(TemplateEngine.readPage(exercise
     cssLink: `<link rel="stylesheet" href="/pages/exercises/exercises.css">`,  
 });
 
+const pageNotFoundPath = path.join(process.cwd(), 'public', 'pages', '404', '404.html');
+const pageNotFound = TemplateEngine.renderPage(TemplateEngine.readPage(pageNotFoundPath), {
+    tabTitle: `Page not found - CodeWarZone`,
+    cssLink: `<link rel="stylesheet" href="/pages/404/404.css">`,
+});
+
 export default {
     frontPage,
     aboutPage,
     contactPage,
     exercisesPage,
+    pageNotFound,
 };

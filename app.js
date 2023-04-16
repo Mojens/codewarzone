@@ -22,6 +22,10 @@ app.get('/exercises' , (req, res) => {
     res.send(PageGenerator.exercisesPage);
 });
 
+app.get('*', (req, res) => {
+    res.send(PageGenerator.pageNotFound);
+});
+
 app.listen(process.env.PORT, (error) => {
     if (error) {
         console.log(error);
