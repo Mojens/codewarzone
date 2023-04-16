@@ -18,6 +18,9 @@ app.get('/about', (req, res) => {
 app.get('/contact', (req, res) => {
     res.send(PageGenerator.contactPage);
 });
+app.get('/exercises' , (req, res) => {
+    res.send(PageGenerator.exercisesPage);
+});
 
 app.listen(process.env.PORT, (error) => {
     if (error) {
