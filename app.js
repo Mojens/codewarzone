@@ -9,8 +9,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(path.resolve(), '/public')));
 
 
-
-
 app.get('/', (req, res) => {
     res.send(PageGenerator.frontPage);
 });

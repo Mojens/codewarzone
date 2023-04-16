@@ -14,6 +14,7 @@ const aboutPage = TemplateEngine.renderPage(TemplateEngine.readPage(aboutPagePat
 const contactPagePath = path.join(process.cwd(), 'public', 'pages', 'contact', 'contact.html');
 const contactPage = TemplateEngine.renderPage(TemplateEngine.readPage(contactPagePath), {
     tabTitle: `Contact - CodeWarZone`,
+    cssLink: `<link rel="stylesheet" href="/pages/contact/contact.css">`,
 });
 
 export default {

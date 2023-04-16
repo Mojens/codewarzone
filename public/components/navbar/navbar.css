@@ -7,6 +7,9 @@
     .navbar-brand {
       color: #fff;
     }
+    .navbar{
+      border-bottom: 1px solid #666;
+    }
   }
   
   @media (prefers-color-scheme: light) {
@@ -17,6 +20,9 @@
     .navbar-nav .nav-link,
     .navbar-brand {
       color: var(--navbar-text-color);
+    }
+    .navbar{
+      border-bottom: 1px solid #666;
     }
   }
   

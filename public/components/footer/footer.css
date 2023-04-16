@@ -1,0 +1,41 @@
+@media (prefers-color-scheme: dark) {
+    .bg-dark {
+      background-color: #343a40 !important;
+      color: #fff !important;
+    }
+    .bg-dark a {
+      color: #fff !important;
+    }
+    .bg-dark p {
+      color: #fff !important;
+    }
+  }
+  @media (prefers-color-scheme: light) {
+    .bg-dark {
+      background-color: #f8f9fa !important;
+      color: #222930 !important;
+    }
+    .bg-dark a {
+      color: #222930 !important;
+    }
+    .bg-dark p {
+      color: #222930 !important;
+    }
+  }
+  .bg-dark {
+    border-top: 1px solid #666; /* Add a top border to the footer */
+  }
+
+  .bg-dark a {
+    color: #fff; /* Set the link color to white */
+    text-decoration: none; /* Remove the underline from links */
+    transition: color 0.2s ease-in-out; /* Add a smooth color transition to links */
+  }
+
+  .bg-dark a:hover {
+    color: #f8f9fa; /* Set the link color on hover */
+  }
+
+  .text-muted {
+    font-size: 0.85rem; /* Reduce the font size of the text element */
+  }  
