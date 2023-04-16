@@ -18,9 +18,16 @@ app.get('/about', (req, res) => {
 app.get('/contact', (req, res) => {
     res.send(PageGenerator.contactPage);
 });
-app.get('/exercises' , (req, res) => {
-    res.send(PageGenerator.exercisesPage);
+app.get('/exercises/:language?', (req, res) => {
+    const language = req.params.language;
+    if (language === 'javascript') {
+        res.send(PageGenerator.javascriotExercisesPage);
+    } else {
+        res.send(PageGenerator.exercisesPage);
+    }
 });
+
+
 
 app.get('*', (req, res) => {
     res.send(PageGenerator.pageNotFound);

@@ -29,6 +29,12 @@ const exercisesPage = TemplateEngine.renderPage(TemplateEngine.readPage(exercise
     cssLink: `<link rel="stylesheet" href="/pages/exercises/exercises.css">`,  
 });
 
+const javascriotExercisesPagePath = path.join(process.cwd(), 'public', 'pages', 'javascript-exercises', 'javascript-exercises.html');
+const javascriotExercisesPage = TemplateEngine.renderPage(TemplateEngine.readPage(javascriotExercisesPagePath), {
+    tabTitle: `JavaScript Exercises - CodeWarZone`,
+    cssLink: `<link rel="stylesheet" href="/pages/exercises/exercises.css">`, 
+});
+
 const pageNotFoundPath = path.join(process.cwd(), 'public', 'pages', '404', '404.html');
 const pageNotFound = TemplateEngine.renderPage(TemplateEngine.readPage(pageNotFoundPath), {
     tabTitle: `Page not found - CodeWarZone`,
@@ -41,4 +47,5 @@ export default {
     contactPage,
     exercisesPage,
     pageNotFound,
+    javascriotExercisesPage
 };
