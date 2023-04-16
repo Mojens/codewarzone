@@ -58,4 +58,9 @@
   .mb-10{
     margin-bottom: 100px;
   }
+  @media (max-width: 767px) {
+    .big-list li {
+      font-size: 3em;
+    }
+  }
   
