@@ -2,11 +2,14 @@ import express from 'express';
 import PageGenerator from './util/PageGenerator.js';
 import path from 'path';
 import dotenv from 'dotenv';
+import QuestionHandling from './util/openai/QuestionHandling.js';
+
 dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(path.resolve(), '/public')));
+
 
 
 app.get('/', (req, res) => {
@@ -63,6 +66,25 @@ app.get('/exercises/:language/:subject?', (req, res) => {
         res.send(PageGenerator.exercisesPage);
     }
 });
+
+app.post("/generateQuestion", async (req, res) => {
+    const { language, subject, difficulty } = req.body;
+    console.log(language, subject, difficulty)
+    const question = await QuestionHandling.createQuestion(language, subject, difficulty);
+    res.json({ question });
+});
+
+app.post('/validateQuestion', async (req, res) => {
+    const { question, answer } = req.body;
+    try {
+        const result = await QuestionHandling.validateQuestion(question, answer);
+        res.json({ result });
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
+});
+
+
 
 
 
