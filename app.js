@@ -31,35 +31,46 @@ app.get('/exercises/:language/:subject?', (req, res) => {
     const subject = req.params.subject;
 
     if (language === 'javascript') {
+        const languageToShow = language.charAt(0).toUpperCase() + language.slice(1);
         if (subject === 'general-knowledge') {
-            res.send(PageGenerator.javascriptGeneralKnowledgePage);
+            const subjectToShow = subject.charAt(0).toUpperCase() + subject.slice(1);
+            res.send(PageGenerator.exercisePage(subjectToShow, languageToShow));
 
         } else if (subject === 'variables') {
-            res.send(PageGenerator.javascriptExercisesPage);
-
+            const subjectToShow = subject.charAt(0).toUpperCase() + subject.slice(1);
+            res.send(PageGenerator.exercisePage(subjectToShow, languageToShow));
         } else if (subject === 'this') {
-            res.send(PageGenerator.javascriptExercisesPage);
+            const subjectToShow = subject.charAt(0).toUpperCase() + subject.slice(1);
+            res.send(PageGenerator.exercisePage(subjectToShow, languageToShow));
 
         } else if (subject === 'window') {
-            res.send(PageGenerator.javascriptExercisesPage);
+            const subjectToShow = subject.charAt(0).toUpperCase() + subject.slice(1);
+            res.send(PageGenerator.exercisePage(subjectToShow, languageToShow));
 
         } else if (subject === 'dom') {
-            res.send(PageGenerator.javascriptExercisesPage);
+            const subjectToShow = subject.toUpperCase()
+            res.send(PageGenerator.exercisePage(subjectToShow, languageToShow));
 
         } else if (subject === 'functions') {
-            res.send(PageGenerator.javascriptExercisesPage);
+            const subjectToShow = subject.charAt(0).toUpperCase() + subject.slice(1);
+            res.send(PageGenerator.exercisePage(subjectToShow, languageToShow));
 
         } else if (subject === 'objects') {
-            res.send(PageGenerator.javascriptExercisesPage);
+            const subjectToShow = subject.charAt(0).toUpperCase() + subject.slice(1);
+            res.send(PageGenerator.exercisePage(subjectToShow, languageToShow));
 
         } else if (subject === 'arrays') {
-            res.send(PageGenerator.javascriptExercisesPage);
+            const subjectToShow = subject.charAt(0).toUpperCase() + subject.slice(1);
+            res.send(PageGenerator.exercisePage(subjectToShow, languageToShow));
 
         } else if (subject === 'if-else') {
-            res.send(PageGenerator.javascriptExercisesPage);
+            const subjectToShow = subject.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('-');
+            res.send(PageGenerator.exercisePage(subjectToShow, languageToShow));
 
         } else if (subject === 'fetch-async-await') {
-            res.send(PageGenerator.javascriptExercisesPage);
+            const subjectToShow1 = subject.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(', ');
+            const subjectToShow2 = subjectToShow1.replace(/,(?!.*,)/gmi, ' &');
+            res.send(PageGenerator.exercisePage(subjectToShow2, languageToShow));
         }
         else {
             res.send(PageGenerator.javascriptExercisesPage);
