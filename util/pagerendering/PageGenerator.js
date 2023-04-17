@@ -58,11 +58,21 @@ const pageNotFound = TemplateEngine.renderPage(TemplateEngine.readPage(pageNotFo
     cssLink: `<link rel="stylesheet" href="/pages/404/404.css">`,
 });
 
+
+/* Exercises */
+const javascriptGeneralKnowledgePath = path.join(process.cwd(), 'public', 'pages', 'javascript-exercises', 'general-knowledge', 'general-knowledge.html');
+const javascriptGeneralKnowledgePage = TemplateEngine.renderPage(TemplateEngine.readPage(javascriptGeneralKnowledgePath), {
+    tabTitle: `JavaScript General Knowledge - CodeWarZone`,
+    cssLink: `<link rel="stylesheet" href="/pages/exercises/exercisegame.css">`,
+});
+
+
 export default {
     frontPage,
     aboutPage,
     contactPage,
     exercisesPage,
     pageNotFound,
-    javascriptExercisesPage
+    javascriptExercisesPage,
+    javascriptGeneralKnowledgePage,
 };

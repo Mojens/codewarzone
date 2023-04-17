@@ -32,7 +32,7 @@ app.get('/exercises/:language/:subject?', (req, res) => {
 
     if (language === 'javascript') {
         if (subject === 'general-knowledge') {
-            res.send(PageGenerator.javascriptExercisesPage);
+            res.send(PageGenerator.javascriptGeneralKnowledgePage);
 
         } else if (subject === 'variables') {
             res.send(PageGenerator.javascriptExercisesPage);
