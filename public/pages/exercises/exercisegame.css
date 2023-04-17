@@ -86,10 +86,7 @@
 
 .output {
     width: 50%;
-    height: 400px;
-    border: 2px solid black;
-    padding: 20px;
-    white-space: pre-wrap;
+    height: 400px !important;
     float: right;
 }
 
@@ -118,11 +115,83 @@
     }
 
     .output {
-        display: block;
         width: 100%;
         height: 200px;
-        border: 2px solid black;
-        padding: 20px;
-        white-space: pre-wrap;
+    }
+    .terminal-window{
+        margin-bottom: -10% !important;
     }
 }
+
+.terminal-window {
+    text-align: left;
+    width: 100%;
+    max-width: 600px;
+    height: 360px;
+    border-radius: 10px;
+    margin: auto;
+    position: relative;
+  }
+  
+  .terminal-window header {
+    background: #E0E8F0;
+    height: 30px;
+    border-radius: 8px 8px 0 0;
+    padding-left: 10px;
+  }
+  
+  .terminal-window header .button {
+    width: 12px;
+    height: 12px;
+    margin: 10px 4px 0 0;
+    display: inline-block;
+    border-radius: 8px;
+  }
+  
+  .terminal-window header .button.green {
+    background: #3BB662;
+  }
+  
+  .terminal-window header .button.yellow {
+    background: #E5C30F;
+  }
+  
+  .terminal-window header .button.red {
+    background: #E75448;
+  }
+  
+  .terminal-window section.terminal,
+  .terminal-window section.terminalMobile {
+    color: white;
+    font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
+    font-size: 11pt;
+    background: #30353A;
+    padding: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    top: 30px;
+    bottom: 0;
+    overflow: auto;
+  }
+  
+  .terminal-window section.terminal .typed-cursor,
+  .terminal-window section.terminalMobile .typed-cursor {
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .terminal-window {
+        margin-top: 5%;
+      height: auto;
+    }
+    
+    .terminal-window section.terminal,
+    .terminal-window section.terminalMobile {
+      height: 300px;
+    }
+  }
+  
