@@ -194,4 +194,34 @@
       height: 300px;
     }
   }
-  
+  .difficulty {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.difficulty label {
+    margin-right: 10px;
+}
+
+.difficulty select {
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.response {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.response.correct {
+    color: green;
+}
+
+.response.incorrect {
+    color: red;
+}  
