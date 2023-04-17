@@ -1,40 +1,46 @@
 <main>
-    <div class="container mt-5" >
+    <div class="container mt-5">
         <h1 class="text-center mb-5">
             General Knowledge
         </h1>
         <div class="exercise-window animate">
-                <div class="difficulty">
-                    <label for="difficulty">Difficulty:</label>
-                    <select id="difficulty" name="difficulty">
-                        <option value="easy">Easy</option>
-                        <option value="medium">Medium</option>
-                        <option value="hard">Hard</option>
-                    </select>
+            <div class="difficulty">
+                <label for="difficulty">Difficulty:</label>
+                <select id="difficulty" name="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+                <div class="d-inline-block">
+                    <h5 class=""><strong>Language: </strong>Javascript</h5>
                 </div>
-                <div class="whiteboard" id="question">
-                    <p>What is your favorite programming language?</p>
+                <div class="d-inline-block m-lg-2">
+                    <h5 class=""><strong>Subject: </strong>General Knowledge</h5>
                 </div>
-                <div class="response"></div>
-                <div class="options">
-                    <button class="skip">Skip</button>
-                    <button>Answer</button>
-                </div>
-                <h4>Write your answer below and click submit.</h4>
-                <div class="editor" id="editor">// Type your answer here</div>
-                <div class="output terminal-window">
-                    <header>
-                        <div class="button green"></div>
-                        <div class="button yellow"></div>
-                        <div class="button red"></div>
-                    </header>
-                    <section class="terminal">
-                        <div id="output"></div>
-                    </section>
-                </div>
-                <button id="run-code" class="run-btn">Run</button>
-                <button class="submitAnswer" id="submitAnswer">Submit</button>
-                <button class="submitAnswer mr-1" id="clearBtn">Clear</button>
+            </div>
+            <div class="whiteboard" id="question">
+                <p>What is your favorite programming language?</p>
+            </div>
+            <div class="response"></div>
+            <div class="options">
+                <button class="skip">Skip</button>
+                <button>Answer</button>
+            </div>
+            <h4>Write your answer below and click submit.</h4>
+            <div class="editor" id="editor">// Type your answer here</div>
+            <div class="output terminal-window">
+                <header>
+                    <div class="button green"></div>
+                    <div class="button yellow"></div>
+                    <div class="button red"></div>
+                </header>
+                <section class="terminal">
+                    <div id="output"></div>
+                </section>
+            </div>
+            <button id="run-code" class="run-btn">Run</button>
+            <button class="submitAnswer" id="submitAnswer">Submit</button>
+            <button class="submitAnswer mr-1" id="clearBtn">Clear</button>
         </div>
     </div>
 </main>
