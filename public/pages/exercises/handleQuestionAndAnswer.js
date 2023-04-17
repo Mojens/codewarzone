@@ -23,6 +23,7 @@ newQuestionButton.addEventListener('click', () => {
 
 
 document.getElementById("run-code").addEventListener("click", () => {
+    console.log(questionElement.textContent.trimStart().trimEnd());
     let code = editor.getValue();
 
     let output = '';
@@ -46,4 +47,5 @@ document.getElementById("clearBtn").addEventListener("click", () => {
 })
 
 let questionElement = document.getElementById("question")
+let question = questionElement.textContent.trimStart().trimEnd()
 let answer = editor.getValue()
