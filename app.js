@@ -69,7 +69,6 @@ app.get('/exercises/:language/:subject?', (req, res) => {
 
 app.post("/generatequestion", async (req, res) => {
     const { language, subject, difficulty } = req.body;
-    console.log(language, subject, difficulty)
     const question = await QuestionHandling.createQuestion(language, subject, difficulty);
     res.json({ question });
 });
