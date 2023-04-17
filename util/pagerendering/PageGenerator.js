@@ -46,9 +46,21 @@ const exercisesPage = TemplateEngine.renderPage(TemplateEngine.readPage(exercise
     cssLink: `<link rel="stylesheet" href="/pages/exercises/exercises.css">`,
 });
 
-const javascriotExercisesPagePath = path.join(process.cwd(), 'public', 'pages', 'exercises','javascript-exercises', 'javascript-exercises.html');
-const javascriptExercisesPage = TemplateEngine.renderPage(TemplateEngine.readPage(javascriotExercisesPagePath), {
+const javascriptExercisesPagePath = path.join(process.cwd(), 'public', 'pages', 'exercises', 'javascript-exercises', 'javascript-exercises.html');
+const javascriptExercisesPage = TemplateEngine.renderPage(TemplateEngine.readPage(javascriptExercisesPagePath), {
     tabTitle: `JavaScript Exercises - CodeWarZone`,
+    cssLink: `<link rel="stylesheet" href="/pages/exercises/exercises.css">`,
+});
+
+const htmlExercisesPagePath = path.join(process.cwd(), 'public', 'pages', 'exercises', 'html-exercises', 'html-exercises.html');
+const hmtlExercisesPage = TemplateEngine.renderPage(TemplateEngine.readPage(htmlExercisesPagePath), {
+    tabTitle: `HTML Exercises - CodeWarZone`,
+    cssLink: `<link rel="stylesheet" href="/pages/exercises/exercises.css">`,
+});
+
+const cssExercisesPagePath = path.join(process.cwd(), 'public', 'pages', 'exercises', 'css-exercises', 'css-exercises.html');
+const cssExercisesPage = TemplateEngine.renderPage(TemplateEngine.readPage(cssExercisesPagePath), {
+    tabTitle: `CSS Exercises - CodeWarZone`,
     cssLink: `<link rel="stylesheet" href="/pages/exercises/exercises.css">`,
 });
 
@@ -58,21 +70,7 @@ const pageNotFound = TemplateEngine.renderPage(TemplateEngine.readPage(pageNotFo
     cssLink: `<link rel="stylesheet" href="/pages/404/404.css">`,
 });
 
-
-/* Exercises */
-/*
-const javascriptGeneralKnowledgePath = path.join(process.cwd(), 'public', 'pages', 'javascript-exercises', 'general-knowledge', 'general-knowledge.html');
-const javascriptGeneralKnowledgePage = TemplateEngine.renderPage(TemplateEngine.readPage(javascriptGeneralKnowledgePath), {
-    tabTitle: `JavaScript General Knowledge - CodeWarZone`,
-    cssLink: `<link rel="stylesheet" href="/pages/exercises/exercisegame.css">`,
-    scriptLink: `
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.17.0/ace.js"></script>
-    <script type="module" src="/pages/exercises/editor.js"></script>
-    <script type="module" src="/pages/exercises/handleQuestionAndAnswer.js"></script>
-    `,
-});
-*/
-function exercisePage(subject, language){
+function exercisePage(subject, language) {
     return TemplateEngine.exercisePage({
         tabTitle: `JavaScript Variables - CodeWarZone`,
         subject: subject,
@@ -89,4 +87,6 @@ export default {
     pageNotFound,
     javascriptExercisesPage,
     exercisePage,
+    hmtlExercisesPage,
+    cssExercisesPage,
 };
