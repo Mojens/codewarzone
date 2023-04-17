@@ -224,4 +224,68 @@
 
 .response.incorrect {
     color: red;
-}  
+} 
+/* Define styles for light mode */
+@media (prefers-color-scheme: light) {
+    .exercise-window {
+      background-color: #222930;
+      color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+      padding: 20px;
+    }
+    .terminal-window section.terminal,
+  .terminal-window section.terminalMobile {
+    color: #30353A;
+    font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
+    font-size: 11pt;
+    background: white;
+    padding: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    top: 30px;
+    bottom: 0;
+    overflow: auto;
+  }
+  }
+  
+  /* Define styles for dark mode */
+  @media (prefers-color-scheme: dark) {
+    .exercise-window {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(255, 255, 255, 0.25);
+      color: #222930;
+      padding: 20px;
+    }
+    .terminal-window header {
+        background: #575859;
+        height: 30px;
+        border-radius: 8px 8px 0 0;
+        padding-left: 10px;
+      }
+  }
+  
+  /* Define the pop-up animation */
+  @keyframes pop-up {
+    from {
+      transform: scale(0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Apply the animation to the exercise window */
+  .exercise-window {
+    animation-name: pop-up;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+  

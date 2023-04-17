@@ -1,5 +1,9 @@
 import { editor } from "./editor.js";
 
+setTimeout(() => {
+    document.querySelector('.exercise-window').classList.remove('animate');
+  }, 500);
+
 const difficultyDropdown = document.getElementById('difficulty');
 const newQuestionContainer = document.createElement('div');
 newQuestionContainer.classList.add('new-question-container');

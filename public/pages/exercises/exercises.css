@@ -1,66 +1,67 @@
 /* Default styles */
 .big-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    width: 100%;
-  }
-  
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.big-list li {
+  color: #222930;
+  font-size: 5em;
+  font-family: 'Titillium Web', sans-serif;
+  padding: 0;
+  margin: 0 0 0;
+  border-bottom: 1px solid #666666;
+  position: relative;
+  width: 100%;
+}
+
+.big-list li a {
+  color: #222930;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  padding: 20px 40px;
+  -moz-transition-property: background-color;
+  -o-transition-property: background-color;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.big-list li a:hover {
+  background-color: #222930;
+  color: #d9d9d9;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
   .big-list li {
-    color: #222930;
-    font-size: 5em;
-    font-family: 'Titillium Web', sans-serif;
-    padding: 0;
-    margin: 0 0 0;
-    border-bottom: 1px solid #666666;
-    position: relative;
-    width: 100%;
+    color: #f2f2f2;
+    border-bottom: 1px solid #999999;
   }
-  
+
   .big-list li a {
-    color: #222930;
-    text-decoration: none;
-    display: inline-block;
-    width: 100%;
-    padding: 20px 40px;
-    -moz-transition-property: background-color;
-    -o-transition-property: background-color;
-    -webkit-transition-property: background-color;
-    transition-property: background-color;
-    -moz-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
+    color: #f2f2f2;
   }
-  
+
   .big-list li a:hover {
-    background-color: #222930;
-    color: #d9d9d9;
+    background-color: #f2f2f2;
+    color: #404040;
   }
-  
-  /* Dark mode styles */
-  @media (prefers-color-scheme: dark) {
-    .big-list li {
-      color: #f2f2f2;
-      border-bottom: 1px solid #999999;
-    }
-    
-    .big-list li a {
-      color: #f2f2f2;
-    }
-    
-    .big-list li a:hover {
-      background-color: #f2f2f2;
-      color: #404040;
-    }
+}
+
+.mb-10 {
+  margin-bottom: 100px;
+}
+
+@media (max-width: 767px) {
+  .big-list li {
+    font-size: 3em;
   }
-  .mb-10{
-    margin-bottom: 100px;
-  }
-  @media (max-width: 767px) {
-    .big-list li {
-      font-size: 3em;
-    }
-  }
-  
+}
