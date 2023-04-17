@@ -26,8 +26,8 @@ function exercisePage(config = {}) {
         .replace("$CSS_LINK", config.cssLink || `<link rel="stylesheet" href="/pages/exercises/exercisegame.css">`)
 
     const exerciseComponent = fs.readFileSync(exercisePath).toString()
-        .replaceAll("$SUBJECT", config.subject || "")
-        .replaceAll("$LANGUAGE", config.language || "")
+        .replace(/\$SUBJECT/g, config.subject || "")
+        .replace(/\$LANGUAGE/g, config.language || "")
 
     const footer = fs.readFileSync(footerPath).toString()
         .replace("$SCRIPT_LINK", config.scriptLink || `<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.17.0/ace.js"></script>
