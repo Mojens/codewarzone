@@ -1,19 +1,18 @@
 .whiteboard {
-    width: 80%;
+    width: 100%;
     height: 300px;
     background-color: white;
     color: black;
     border: 2px solid black;
-    margin: 50px auto;
     padding: 20px;
-    text-align: center;
     font-size: 24px;
     font-weight: bold;
     line-height: 1.5;
-    text-align: center;
-    line-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
-    white-space: nowrap; 
+    white-space: nowrap;
 }
 
 .options {
@@ -27,15 +26,30 @@
 }
 
 .editor {
-    width: 80%;
+    width: 50%;
     height: 400px;
-    margin: 50px auto;
-    margin-top: 10px !important;
     border: 2px solid black;
+    padding: 10px;
+    position: relative;
+    float: left;
 }
 
 .submitAnswer {
-    display: block;
+    display: inline-block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    float: right;
+}
+
+.run-btn {
+    display: inline-block;
     margin: 20px auto;
     padding: 10px 20px;
     background-color: #4CAF50;
@@ -46,6 +60,7 @@
     font-weight: bold;
     cursor: pointer;
 }
+
 .options button {
     padding: 10px 20px;
     background-color: #4CAF50;
@@ -62,44 +77,52 @@
 }
 
 .options button.skip {
-    background-color: #f44336 !important;
+    background-color: #f44336;
 }
 
 .options button.skip:hover {
-    background-color: #d32f2f !important;
+    background-color: #d32f2f;
+}
+
+.output {
+    width: 50%;
+    height: 400px;
+    border: 2px solid black;
+    padding: 20px;
+    white-space: pre-wrap;
+    float: right;
 }
 
 @media (max-width: 600px) {
     .whiteboard {
-        width: 90%;
+        width: 100%;
         height: 200px;
-        margin: 20px auto;
         font-size: 14px;
-        text-align: center;
-        line-height: 200px; /* set the same height as the whiteboard */
-        overflow: hidden; /* or 'scroll' to enable scrolling */
-        white-space: nowrap; 
     }
 
     .options {
-        display: block;
-        margin: 20px auto;
-        width: 80%;
+        flex-direction: column;
+        width: 100%;
         font-size: 16px;
         line-height: 1.5;
     }
 
-    .editor {
-        width: 90%;
-        height: 300px;
-        margin: 20px auto;
+    .options button {
+        width: 100%;
+        margin-bottom: 10px;
     }
 
-    .submit {
-        margin: 20px auto;
-        font-size: 16px;
+    .editor {
+        width: 100%;
+        height: 300px;
     }
-    .ml-10 {
-        margin-left: 5%;
+
+    .output {
+        display: block;
+        width: 100%;
+        height: 200px;
+        border: 2px solid black;
+        padding: 20px;
+        white-space: pre-wrap;
     }
 }
