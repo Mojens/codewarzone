@@ -25,11 +25,17 @@ function contactPage(errorMessage = '', successMessage = '') {
         scriptLink: `
         <script>
                     const errorResponse = document.getElementById('contact-error-response');
+                    if ('${errorMessage}' !== '') {
+                    errorResponse.style.display = 'block';
                     errorResponse.textContent = '${errorMessage}';
+                    }
                 </script>
                 <script>
             const successResponse = document.getElementById('contact-success-response');
+            if ('${successMessage}' !== '') {
+            successResponse.style.display = 'block';
             successResponse.textContent = '${successMessage}';
+            }
         </script>`,
     });
 }
