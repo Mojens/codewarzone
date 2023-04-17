@@ -1,8 +1,10 @@
 import express from 'express';
-import PageGenerator from './util/PageGenerator.js';
+import PageGenerator from './util/pagerendering/PageGenerator.js';
 import path from 'path';
 import dotenv from 'dotenv';
 import QuestionHandling from './util/openai/QuestionHandling.js';
+import ContactMail from './util/mail/ContactMail.js';
+
 
 dotenv.config();
 const app = express();
@@ -83,31 +85,12 @@ app.post('/validatequestion', async (req, res) => {
     }
 });
 
-
-
-
-
-
-app.post('/contact', (req, res) => {
-    const name = req.body.name;
-    const email = req.body.email;
-    const message = req.body.message;
-
-    /*
-    Skal ændres til status osv, mangler bare nodemailer
-    if (name.length < 2) {
-        const errorMessage = 'An has occurred. Please try again later.';
-        res.send(PageGenerator.contactPage(errorMessage, ''));
-        return;
-    } else {
-        const successMessage = 'Your message has been sent!';
-        res.send(PageGenerator.contactPage('', successMessage));
-    }
-    */
-
-    const errorMessage = 'An has occurred. Please try again later.';
-    res.send(PageGenerator.contactPage(errorMessage, ''));
+app.post('/contact', async (req, res) => {
+    const { name, email, subject, message } = req.body;
+    ContactMail.sendMail(name, email, subject, message, res,
+        PageGenerator, process.env.MAIL_USER, process.env.MAIL_PASS);
 });
+
 
 app.get('*', (req, res) => {
     res.send(PageGenerator.pageNotFound);
