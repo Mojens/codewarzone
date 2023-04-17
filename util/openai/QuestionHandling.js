@@ -1,3 +1,5 @@
+import fetch from 'node-fetch';
+
 const askedQuestions = [];
 
 async function createQuestion(language, subject, difficulty) {
@@ -8,7 +10,6 @@ async function createQuestion(language, subject, difficulty) {
       n: 1,
       stop: 'User:',
     };
-    console.log(JSON.stringify(prompt));
     const response = await fetch('https://api.openai.com/v1/engines/text-davinci-002/completions', {
       method: 'POST',
       headers: {
@@ -42,7 +43,6 @@ async function validateQuestion(question, answer) {
 
   const data = await response.json();
   const givenAnswer = data.choices[0].text.trim();
-  console.log(givenAnswer)
 
   const correctAnswerPattern = /true|yes/i;
   if (correctAnswerPattern.test(givenAnswer)) {
