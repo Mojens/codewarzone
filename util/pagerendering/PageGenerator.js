@@ -64,6 +64,11 @@ const javascriptGeneralKnowledgePath = path.join(process.cwd(), 'public', 'pages
 const javascriptGeneralKnowledgePage = TemplateEngine.renderPage(TemplateEngine.readPage(javascriptGeneralKnowledgePath), {
     tabTitle: `JavaScript General Knowledge - CodeWarZone`,
     cssLink: `<link rel="stylesheet" href="/pages/exercises/exercisegame.css">`,
+    scriptLink: `
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.17.0/ace.js"></script>
+    <script type="module" src="/pages/exercises/editor.js"></script>
+    <script type="module" src="/pages/exercises/handleQuestionAndAnswer.js"></script>
+    `,
 });
 
 

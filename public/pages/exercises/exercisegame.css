@@ -30,6 +30,7 @@
     width: 80%;
     height: 400px;
     margin: 50px auto;
+    margin-top: 10px !important;
     border: 2px solid black;
 }
 
@@ -97,5 +98,8 @@
     .submit {
         margin: 20px auto;
         font-size: 16px;
+    }
+    .ml-10 {
+        margin-left: 5%;
     }
 }
