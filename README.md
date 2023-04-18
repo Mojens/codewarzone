@@ -1,4 +1,4 @@
-![GitHub last commit](https://img.shields.io/github/last-commit/mojens/codewarzone)
+![GitHub last commit](https://img.shields.io/github/last-commit/mojens/codewarzone) ![Website](https://img.shields.io/website?up_message=online&url=https%3A%2F%2Fcodewarzone.vercel.app%2F) ![GitHub forks](https://img.shields.io/github/forks/mojens/codewarzone?style=social)
 # CodeWarZone
 
 CodeWarZone is a website designed to help programming students learn and practice different programming exercises. The website has a range of exercises, to help users improve their programming skills and knowledge.
