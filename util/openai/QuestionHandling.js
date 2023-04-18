@@ -20,7 +20,6 @@ async function createQuestion(language, subject, difficulty) {
       body: JSON.stringify(prompt)
     });
     const data = await response.json();
-    console.log(data)
     question = data.choices[0].text.trim();
   } while (askedQuestions.includes(question));
   askedQuestions.push(question);
@@ -44,7 +43,6 @@ async function validateQuestion(question, answer) {
   });
 
   const data = await response.json();
-  console.log(data)
   const givenAnswer = data.choices[0].text.trim();
 
   const correctAnswerPattern = /true|yes/i;
