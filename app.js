@@ -31,13 +31,13 @@ app.get('/exercises/:language?/:subject?', (req, res) => {
     ExerciseRender.renderExercisePage(req, res);
 });
 
-app.post("/generatequestion", async (req, res) => {
+app.post("/api/generatequestion", async (req, res) => {
     const { language, subject, difficulty } = req.body;
     const question = await QuestionHandling.createQuestion(language, subject, difficulty);
-    res.json({ question });
+    res.json({ data: question });
 });
 
-app.post('/validatequestion', async (req, res) => {
+app.post('/api/validatequestion', async (req, res) => {
     const { question, answer } = req.body;
     try {
         const result = await QuestionHandling.validateQuestion(question, answer);
@@ -47,7 +47,7 @@ app.post('/validatequestion', async (req, res) => {
     }
 });
 
-app.post('/contact', async (req, res) => {
+app.post('/api/contact', async (req, res) => {
     const { name, email, subject, message } = req.body;
     ContactMail.sendMail(name, email, subject, message, res,
         PageGenerator, process.env.MAIL_USER, process.env.MAIL_PASS);

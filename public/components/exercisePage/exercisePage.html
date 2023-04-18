@@ -1,7 +1,7 @@
 <main>
     <div class="container mt-5">
         <h1 class="text-center mb-5">
-            $SUBJECT
+            $LANGUAGE - $SUBJECT
         </h1>
         <div class="exercise-window animate">
             <div class="difficulty">
@@ -12,21 +12,23 @@
                     <option value="hard">Hard</option>
                 </select>
                 <div class="d-inline-block">
-                    <h5 class=""><strong>Language: </strong>$LANGUAGE</h5>
+                    <h5 id="language"><strong>Language: </strong>$LANGUAGE</h5>
                 </div>
                 <div class="d-inline-block m-lg-2">
-                    <h5 class=""><strong>Subject: </strong>$SUBJECT</h5>
+                    <h5 id="subject"><strong>Subject: </strong>$SUBJECT</h5>
                 </div>
             </div>
             <div class="whiteboard" id="question">
-                <p>What is your favorite programming language?</p>
+                <p>Loading......</p>
             </div>
-            <div class="response"></div>
+            <div class="response" id="response">
+                <h3 class="text-center" id="response-message"></h3>
+            </div>
             <div class="options">
-                <button class="skip">Skip</button>
-                <button>Answer</button>
+                <button class="skip" id="skip-btn">Skip</button>
+                <button id="submitAnswer">Answer</button>
             </div>
-            <h4>Write your answer below and click submit.</h4>
+            <h4>Write your answer below and click answer above.</h4>
             <div class="editor" id="editor">// Type your answer here</div>
             <div class="output terminal-window">
                 <header>
@@ -39,7 +41,6 @@
                 </section>
             </div>
             <button id="run-code" class="run-btn">Run</button>
-            <button class="submitAnswer" id="submitAnswer">Submit</button>
             <button class="submitAnswer mr-1" id="clearBtn">Clear</button>
         </div>
     </div>
