@@ -1,0 +1,51 @@
+# CodeWarZone
+
+CodeWarZone is a website designed to help programming students learn and practice different programming exercises. The website has a range of exercises, to help users improve their programming skills and knowledge.
+
+## Features
+
+- Big range of exercises covering different programming languages and topics
+- User-friendly interface with easy navigation
+- Interactive coding environment to test and submit solutions
+
+## Technologies Used
+
+- HTML, CSS, and JavaScript for frontend development
+- Node.js and Express.js for server-side development
+- OpenAI API for generating exercises and validating answers
+- Bootstrap for responsive web design
+- Ace for High Performance Code Editor for the Web
+
+## Installation and Usage
+
+To install and run CodeWarZone on your local machine, follow these steps:
+
+1. Clone the repository: `git clone https://github.com/your-username/codewarzone.git`
+2. Install dependencies: `npm install`
+3. Create a file named `.env` in the root directory of the project
+4. Set up the following environmental variables in the `.env` file:
+
+   - `PORT`: Port number for the application to run on
+   - `OPENAI_API_KEY`: API key for OpenAI API
+   - `MAIL_USER`: Username for sending emails
+   - `MAIL_PASS`: Password for sending emails
+
+5. Start the development server: `npm run dev`
+6. Open your browser and navigate to `http://localhost:{PORT}/`
+
+Note: The environmental variables need to be set inside the `.env` file in the following format: `VARIABLE_NAME=VALUE`. Make sure to not include any quotes around the value.
+
+## Contributing
+
+If you would like to contribute to CodeWarZone, please follow these steps:
+
+1. Fork the repository
+2. Create a new branch: `git checkout -b feature/my-new-feature`
+3. Make your changes and commit them: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin feature/my-new-feature`
+5. Submit a pull request
+
+## Credits
+
+CodeWarZone was created by Mohammad M. (Mojens)
+
