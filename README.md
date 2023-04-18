@@ -1,3 +1,4 @@
+![GitHub last commit](https://img.shields.io/github/last-commit/mojens/codewarzone)
 # CodeWarZone
 
 CodeWarZone is a website designed to help programming students learn and practice different programming exercises. The website has a range of exercises, to help users improve their programming skills and knowledge.
