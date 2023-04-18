@@ -8,6 +8,10 @@ setTimeout(() => {
 document.getElementById("skip-btn").addEventListener("click", () => {
     document.getElementById("response").style.backgroundColor = "";
     document.getElementById("response-message").textContent = "";
+    if (newQuestionContainer.contains(newQuestionButton)) {
+        newQuestionContainer.removeChild(newQuestionButton);
+    }
+    document.getElementById("submitAnswer").style.display = "block";
     document.getElementById('question').innerHTML = DOMPurify.sanitize(`<p>Loading......</p>`);
     generateQuestion();
 });
