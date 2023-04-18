@@ -8,7 +8,7 @@
 [![General badge](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](#) 
 [![General badge](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](#)
 <a href="https://codewarzone.vercel.app/"><img src="https://raw.githubusercontent.com/Mojens/codewarzone/main/public/assets/images/favicon-32x32.png"></a>
-# CodeWaZone
+# CodeWarZone
 
 CodeWarZone is a website designed to help programming students learn and practice different programming exercises. The website has a range of exercises, to help users improve their programming skills and knowledge.
 
