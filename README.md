@@ -1,6 +1,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/mojens/codewarzone) ![Website](https://img.shields.io/website?up_message=online&url=https%3A%2F%2Fcodewarzone.vercel.app%2F) ![GitHub repo size](https://img.shields.io/github/repo-size/mojens/codewarzone) ![GitHub forks](https://img.shields.io/github/forks/mojens/codewarzone?style=social)
 <br>
-[![General badge](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://codewarzone.vercel.app/) [![General badge](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://codewarzone.vercel.app/) [![General badge](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://codewarzone.vercel.app/)
+[![General badge](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](#) [![General badge](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](#) [![General badge](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](#)
+<a href="https://codewarzone.vercel.app/"><img src="https://raw.githubusercontent.com/Mojens/codewarzone/main/public/assets/images/favicon-32x32.png"></a>
 # CodeWaZone
 
 CodeWarZone is a website designed to help programming students learn and practice different programming exercises. The website has a range of exercises, to help users improve their programming skills and knowledge.
