@@ -1,4 +1,7 @@
-![GitHub last commit](https://img.shields.io/github/last-commit/mojens/codewarzone) ![Website](https://img.shields.io/website?up_message=online&url=https%3A%2F%2Fcodewarzone.vercel.app%2F) ![GitHub repo size](https://img.shields.io/github/repo-size/mojens/codewarzone) ![GitHub forks](https://img.shields.io/github/forks/mojens/codewarzone?style=social)
+[![GitHub last commit](https://img.shields.io/github/last-commit/mojens/codewarzone)](https://github.com/Mojens/codewarzone/commits/main)
+[![Website](https://img.shields.io/website?up_message=online&url=https%3A%2F%2Fcodewarzone.vercel.app%2F)](https://codewarzone.vercel.app/)
+[![GitHub repo size](https://img.shields.io/github/repo-size/mojens/codewarzone)](https://github.com/Mojens/codewarzone/archive/refs/heads/main.zip)
+[![GitHub forks](https://img.shields.io/github/forks/mojens/codewarzone?style=social)](https://github.com/Mojens/codewarzone/fork)
 <br>
 [![General badge](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](#) [![General badge](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](#) [![General badge](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](#)
 <a href="https://codewarzone.vercel.app/"><img src="https://raw.githubusercontent.com/Mojens/codewarzone/main/public/assets/images/favicon-32x32.png"></a>
